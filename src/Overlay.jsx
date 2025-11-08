@@ -3,7 +3,7 @@ import { motion,AnimatePresence } from "framer-motion";
 import { AiFillCamera, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping } from "react-icons/ai";
 import { useSnapshot } from "valtio";
 import { state } from "./Store";
-import { Decal } from "@react-three/drei";
+
 
 export function Overlay () {
   const snap = useSnapshot(state);
