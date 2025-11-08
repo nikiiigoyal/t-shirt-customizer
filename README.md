@@ -1,16 +1,81 @@
-# React + Vite
+# 3D T-Shirt Customizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**An immersive 3D product customization experience built with React Three Fiber**
 
-Currently, two official plugins are available:
+![Demo GIF](https://tshirtcustomizer-ruddy.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌟 Overview
 
-## Expanding the ESLint configuration
+A cutting-edge web application that revolutionizes product customization by bringing 3D interactions to the browser. Users can personalize a T-shirt in real-time with dynamic colors, custom decals, and interactive camera controls—all rendered smoothly using WebGL technology.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+Real-time 3D Customization: Change the T-shirt color instantly and view the results in a dynamic 3D environment.
+
+Dynamic Decals: Select and apply various logos/decals onto the T-shirt surface.
+
+Smooth Animations: Utilizes Framer Motion for sleek 2D UI transitions and Maath/R3F for smooth camera and color changes in 3D.
+
+Interactive Camera: The T-shirt subtly rotates based on mouse movement, creating an immersive feel.
+
+Screenshot Functionality: Download a PNG image of your customized T-shirt with the click of a button.
+
+## 🛠️ Technology Stack
+
+| Category | Technology | Purpose |
+|----------|-----------|---------|
+| **3D Rendering** | React Three Fiber (R3F) | React renderer for Three.js, declarative 3D scenes |
+| **3D Utilities** | Drei | Essential R3F helpers (`Environment`, `Decal`, `useGLTF`, etc.) |
+| **State Management** | Valtio | Lightweight, proxy-based reactive state |
+| **Animations** | Framer Motion | Smooth 2D UI transitions and orchestrations |
+| **3D Math** | Maath | Advanced easing and damping utilities |
+| **Build Tool** | Vite | Lightning-fast dev server and optimized builds |
+| **Language** | JavaScript (ES6+) | Modern syntax with hooks and async/await |
+
+## 📂 Project Structure
+
+```
+3d-tshirt-customizer/
+├── src/
+│   ├── components/
+│   │   ├── Canvas.jsx       # 3D scene setup (R3F Canvas, lighting, camera)
+│   │   ├── Shirt.jsx         # 3D T-shirt model with materials and decals
+│   │   ├── CameraRig.jsx     # Interactive camera controller
+│   │   ├── Overlay.jsx       # 2D UI layer (color picker, decal selector)
+│   │   └── Backdrop.jsx      # Scene backdrop with shadows
+│   ├── store/
+│   │   └── Store.jsx         # Valtio state management
+│   ├── config/
+│   │   └── constants.js      # Configuration (colors, decals, etc.)
+│   ├── App.jsx               # Root component
+│   └── main.jsx              # Application entry point
+├── public/
+│   ├── models/
+│   │   └── shirt_baked_collapsed.glb  # Optimized 3D T-shirt model
+│   └── decals/               # Logo/decal image files
+├── package.json
+└── vite.config.js
+```
+
+
+## 🙏 Acknowledgments
+
+- [Three.js](https://threejs.org/) - The foundation of 3D web graphics
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) - Making Three.js declarative
+- [Drei](https://github.com/pmndrs/drei) - Essential R3F utilities
+- [Valtio](https://github.com/pmndrs/valtio) - Simplifying state management
+- [Framer Motion](https://www.framer.com/motion/) - Beautiful animations made easy
+
+---
+
+<div align="center">
+
+
+
+
+
+</div>
