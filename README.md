@@ -8,7 +8,7 @@
 
 ---
 
-## 🌟 Overview
+## Overview
 
 A cutting-edge web application that revolutionizes product customization by bringing 3D interactions to the browser. Users can personalize a T-shirt in real-time with dynamic colors, custom decals, and interactive camera controls—all rendered smoothly using WebGL technology.
 
@@ -62,7 +62,7 @@ Screenshot Functionality: Download a PNG image of your customized T-shirt with t
 ```
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Three.js](https://threejs.org/) - The foundation of 3D web graphics
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) - Making Three.js declarative
