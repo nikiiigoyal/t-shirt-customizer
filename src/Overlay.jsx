@@ -75,11 +75,12 @@ function Customizer() {
   const snap = useSnapshot(state)
   return (
     <div className="customizer">
-      <div className="color-options">
+      <div className="">
         {/* maps over colors and declas to chnge  */}
-        {snap.colors.map((color) => (
+        {/* {snap.colors.map((color) => (
           <div key={color} className={`circle`} style={{ background: color }} onClick={() => (state.color = color)}></div>
-        ))}
+        ))} */}
+        <input  className= "color-picker" type='color' onChange={(e) => (state.color = e.target.value)}  value={snap.color}/>
       </div>
       <div className="decals">
         <div className="decals--container">
