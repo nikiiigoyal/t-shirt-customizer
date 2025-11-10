@@ -5,9 +5,9 @@ const state = proxy({
   intro: true, 
   // array of available colors and logos
   // colors: ['#ccc', '#EFBD4E', '#80C670', '#726DE8', '#EF674E', '#353934'],
-  decals: ['binance', 'uniswap', 'ethereum'],
+  decals: ['binance', 'uniswap', 'ethereum','SuiLogoOcean','solanaLogoMark'],
   // array of selected color and logo
-  color: '#EFBD4E',
+  color: '#CfC8CA',
   decal: 'uniswap'
 })
 
