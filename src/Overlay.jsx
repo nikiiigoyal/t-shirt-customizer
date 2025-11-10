@@ -1,6 +1,6 @@
 import { Logo } from '@pmndrs/branding'
 import { motion, AnimatePresence } from 'framer-motion'
-import { AiFillCamera, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping } from 'react-icons/ai'
+import { AiFillCamera, AiFillGithub, AiOutlineArrowLeft, AiOutlineHighlight, AiOutlineShopping } from 'react-icons/ai'
 import { useSnapshot } from 'valtio'
 import { state } from './Store'
 
@@ -20,6 +20,66 @@ export function Overlay() {
           <AiOutlineShopping size="3em" />
         </motion.div>
       </motion.header>
+      <motion.footer
+        initial={{ opacity: 0, y: 100 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={transition}
+        style={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '20px',
+          alignItems: 'center',
+          zIndex: 1000
+        }}>
+        <a 
+          href="https://nikita-goyal.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            fontSize: '14px',
+            fontWeight: '500',
+            transition: 'opacity 0.3s',
+            opacity: 0.8
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = 1
+            e.currentTarget.style.transform = 'scale(1.1)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = 0.8
+            e.currentTarget.style.transform = 'scale(1)'
+          }}>
+          <img src="logo.png" alt="Portfolio" style={{ width: '32px', height: '32px' }} />
+        </a>
+        <span style={{ color: 'white', opacity: 0.5 }}>|</span>
+        <a 
+          href="https://github.com/nikiiigoyal/t-shirt-customizer" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            fontSize: '14px',
+            fontWeight: '500',
+            transition: 'opacity 0.3s',
+            opacity: 0.8
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = 1
+            e.currentTarget.style.transform = 'scale(1.1)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = 0.8
+            e.currentTarget.style.transform = 'scale(1)'
+          }}>
+          <AiFillGithub size="2em" />
+        </a>
+      </motion.footer>
       <AnimatePresence>
 
         {/* If snap.intro is FALSE (Customizer Screen):
